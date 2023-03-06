@@ -1,0 +1,11 @@
+Cap,	Geo,	Tipo-Arsenal
+5,	GPS5,	bct
+5,	GPS5,	bct
+5,	GPS5,	bct
+6,	GPS6,	act
+2,	PGS2,	ac
+8,	GPS8, 	abbccdt
+0,	GPS0, 	ab
+0,	GPS0, 	ab
+5,	GPS5,	bct
+1,	GPS1,	bc
