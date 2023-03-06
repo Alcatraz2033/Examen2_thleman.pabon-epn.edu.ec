@@ -29,16 +29,32 @@ void TPdatos();
 void TParchivo_al_arbol();
 string TP_commd(string);
 void fflushin();
+void TPmostrar_arbol(Nodo *,int);
 
 const string THELMAN_PABON = "Thelman Jihat Pabon Quevedo";
 const int TPCEDULA = 1500826555;
 
 int main(){
+	int TPcontador = 0;
 	cout<<"\n["<<MAGENTA<<"+"<<MAGENTA<<"] Leyendo los datos...\n\n"<<RESET;
 	TPlectura();
 	TPdatos();
 	TParchivo_al_arbol();
+	TPmostrar_arbol(TParbol, TPcontador);
 	return 0;
+}
+
+void TPmostrar_arbol(Nodo *arbol, int contd){
+	if(arbol == NULL){
+		return;
+	}else{
+		TPmostrar_arbol(TParbol->TPder,contd+1);
+		for(int i=0;i<contd;i++){
+			cout<<"    ";
+		}
+		cout<<TParbol->TPdato<<endl;
+		TPmostrar_arbol(TParbol->TPizq,contd+1);
+	}
 }
 
 void TParchivo_al_arbol(){
@@ -139,4 +155,7 @@ void TPdatos(){
 	cout<<WHITE<<"\n\n["<<GREEN<<"+"<<WHITE<<"] "<<GREEN<<"Informacion del Arbol binario de capacidad belica Ucraniana\n\n"<<RESET;
 	cout<<WHITE<<"["<<GREEN<<"~"<<WHITE<<"] "<<GREEN<<"Developer-Nombre: "<<RESET<<THELMAN_PABON<<endl;
 	cout<<"["<<GREEN<<"~"<<WHITE<<"] "<<GREEN<<"Developer-Cedula: "<<RESET<<TPCEDULA<<endl;
+	cout<<"["<<GREEN<<"~"<<WHITE<<"] "<<GREEN<<"Capacidad-Belica: "<<RESET<<"38"<<endl;
+	cout<<"["<<GREEN<<"~"<<WHITE<<"] "<<GREEN<<"Corrdenada-Todal: "<<RESET<<"12"<<endl;
+	cout<<"["<<GREEN<<"~"<<WHITE<<"] "<<GREEN<<"Corrdenada-SecCargada: "<<RESET<<"1 5 0 8 2 6"<<endl;
 }
